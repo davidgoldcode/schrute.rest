@@ -19,7 +19,7 @@ function getRandomQuote() {
   return quotes[randomIndex];
 }
 
-server.get("/", (req, res) => {
+server.get("/api", (req, res) => {
   const quote = getRandomQuote();
   if (quote) {
     res.status(200).json({ quote });
